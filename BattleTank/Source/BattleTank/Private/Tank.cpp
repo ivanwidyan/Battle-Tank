@@ -3,7 +3,6 @@
 #include "BattleTank.h"
 #include "Tank.h"
 
-
 // Sets default values
 ATank::ATank()
 {
@@ -12,6 +11,11 @@ ATank::ATank()
 
 	// No need to protect points as added to construction
 	TankAimingComponent = CreateDefaultSubobject<UTankAimingComponent>(FName("Aiming Component"));
+}
+
+void ATank::SetBarrelReference(UStaticMeshComponent * BarrelToSet)
+{
+	TankAimingComponent->SetBarrelReference(BarrelToSet);
 }
 
 // Called when the game starts or when spawned
