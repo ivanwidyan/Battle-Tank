@@ -8,6 +8,7 @@
 // Forward declaration
 class UTankBarrel;
 class UTankAimingComponent;
+class AProjectile;
 
 UCLASS()
 class BATTLETANK_API ATank : public APawn
@@ -44,4 +45,10 @@ private:
 	
 	UPROPERTY(EditAnywhere, category = Firing)
 	float LaunchSpeed = 4000;
+
+	UPROPERTY(EditAnywhere, category = Setup)
+	TSubclassOf<AProjectile> ProjectileBlueprint;
+
+	// Local barrel reference for spawning projectile
+	UTankBarrel* Barrel = nullptr;
 };
