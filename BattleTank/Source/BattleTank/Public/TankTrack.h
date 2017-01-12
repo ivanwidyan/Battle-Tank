@@ -30,5 +30,8 @@ private:
 	UFUNCTION()
 	void OnHit (UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
 
-	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override;
+	void ApplySidewaysForce();
+	void DriveTrack();
+
+	float CurrentThrottle = 0;
 };
