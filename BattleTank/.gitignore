@@ -1,5 +1,6 @@
 # Visual Studio 2015 user specific files
 .vs/
+BattleTank.VC.VC.opendb
 
 # Compiled Object files
 *.slo
@@ -43,9 +44,6 @@
 # Precompiled Assets
 SourceArt/**/*.png
 SourceArt/**/*.tga
-
-# Starter Content
-Content/StarterContent
 
 # Binary Files
 Binaries/*
