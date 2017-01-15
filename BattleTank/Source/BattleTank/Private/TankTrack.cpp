@@ -5,7 +5,7 @@
 
 UTankTrack::UTankTrack()
 {
-	PrimaryComponentTick.bCanEverTick = true;
+	PrimaryComponentTick.bCanEverTick = false;
 }
 
 void UTankTrack::BeginPlay()
@@ -28,6 +28,7 @@ void UTankTrack::SetThrottle(float Throttle)
 void UTankTrack::DriveTrack()
 {
 	auto ForceApplied = GetForwardVector() * CurrentThrottle * TrackMaxDrivingForce;
+
 	auto ForceLocation = GetComponentLocation();
 	auto TankRoot = Cast<UPrimitiveComponent>(GetOwner()->GetRootComponent());
 	TankRoot->AddForceAtLocation(ForceApplied, ForceLocation);
